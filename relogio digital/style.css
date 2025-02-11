@@ -5,6 +5,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -52,20 +53,20 @@ button:hover {
 
 /* Modo Escuro (Aplicando Gestalt: Contraste) */
 body.modo-escuro {
-  background-color: #282828;
+  background-color: #373737;
   color: #f0f0f0;
 }
 
 body.modo-escuro .relogio {
-  background-color: #444;
+  background-color: #333;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 body.modo-escuro h1 {
-  color: #00ff00;
+  color: #00cc00;
 }
 
 body.modo-escuro button {
-  background-color: #666;
+  background-color: #555;
   color: #fff;
 }
