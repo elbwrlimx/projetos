@@ -21,4 +21,4 @@ Um relógio digital simples e funcional, com alternância entre modo claro e esc
 - JavaScript
 
 ## Autor
-Seu Nome
+Elber Lima
