@@ -1,25 +1,88 @@
-body{
-    background-color: bisque;
+@font-face {
+    font-family: Jersey25;
+    src: url(./fonts/Jersey25-Regular.ttf);
+}
+body {
+    background-color: #D9D9D9;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin: 0;
 }
-.container{
+
+.container {
     width: 50%;
-    height: 80%;
-    margin: 0 auto;
-    background-color: white;
+    min-height: 80%;
+    background-color: #F1F1F1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-}	
-h1{
-    color: #828cbdb9;
+}
+
+h1 {
+    color: #333;
     font-size: 2.5em;
     margin-bottom: 20px;
+    font-family: Jersey25;
+}
+
+#lista-tarefas {
+    width: 100%;
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+}
+
+.tarefa {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.tarefa input[type="checkbox"] {
+    margin-right: 10px; /* Espaçamento entre a checkbox e o conteúdo */
+    margin-top: 5px; /* Alinha a checkbox com o título */
+}
+
+.tarefa .conteudo {
+    display: flex;
+    flex-direction: column; /* Título e descrição em coluna */
+}
+
+.tarefa h3 {
+    margin: 0 0 5px 0; /* Margem inferior para separar do parágrafo */
+    font-size: 1.4em; /* Título um pouco maior */
+    font-weight: bold; /* Título em negrito */
+    color: #333; /* Cor escura para o título */
+}
+
+.tarefa p {
+    margin: 0;
+    font-size: 1em;
+    color: #666; /* Cor mais clara para a descrição */
+}
+
+.tarefa.concluida h3,
+.tarefa.concluida p {
+    text-decoration: line-through;
+    color: #888;
+}
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    margin-left: auto; /* Empurra o botão para a direita */
+    padding: 5px;
+}
+
+.delete-btn:hover {
+    color: #cc0000;
 }
