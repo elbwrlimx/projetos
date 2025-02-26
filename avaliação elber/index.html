@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leituras Elber</title>
+    <style>
+        body {
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            height: 75%;
+            width: 50%;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+            flex-direction: column;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+        .listaLeituras {
+            list-style-type: none;
+            padding: 0;
+        }
+        .itemLivro {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .itemLivro button {
+            background-color: #f44336;
+            margin-left: 10px;
+        }
+        .itemLivro button.edit-btn {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <form id="form">
+                <label for="inputTitulo">Título:</label><br>
+                <input id="inputTitulo" placeholder="Digite o título" type="text" required><br>
+                <label for="inputAutor">Autor:</label><br>
+                <input id="inputAutor" placeholder="Digite o autor" type="text" required><br>
+                <label for="inputData">Data de início:</label><br>
+                <input type="date" id="inputData" required><br>
+                <label for="inputStatus">Status:</label><br>
+                <select id="inputStatus" required>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluída">Concluída</option>
+                </select><br>
+                <button type="submit">Adicionar Leitura</button>
+            </form>
+        </div>
+        <ul class="listaLeituras" id="listaLeituras">Leituras Registradas</ul>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
